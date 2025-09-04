@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiara Jain | Psychologist & Life Coach</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="#" class="social"><img src="assets/instagram.png" alt="Instagram"></a>
+      <a href="#" class="social"><img src="assets/twitter.png" alt="Twitter"></a>
+      <a href="#" class="social"><img src="assets/youtube.png" alt="YouTube"></a>
+    </div>
+    <div class="nav-right">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- Overlay Menu -->
+  <nav id="menu" class="overlay-menu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <ul>
+      <li><a href="#hero" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
+      <li><a href="#content" onclick="toggleMenu()">Explore</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Let’s Chat</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I am <span class="highlight">Kiara Jain</span></h1>
+      <p>Psychologist, Life Coach and Mentor.<br>Let’s take a journey together.</p>
+    </div>
+    <div class="hero-img">
+      <img src="assets/pic1nobackground.png" alt="Kiara Jain">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>Know Me Better</h2>
+    <div class="about-content">
+      <img src="assets/pic3.jpeg" alt="Kiara" class="about-img">
+      <p>
+        I am a passionate psychologist and life coach dedicated to helping individuals discover balance, confidence, and purpose in their lives.
+        <br><br>
+        My approach combines empathy with actionable strategies, empowering my clients to take ownership of their journeys. Together, we’ll focus on growth, clarity, and lasting transformation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Explore Section -->
+  <section id="content" class="content">
+    <h2>Explore My Content</h2>
+    <div class="carousel">
+      <div class="carousel-header">
+        <span id="category">Instagram</span>
+        <button onclick="nextCategory()" class="arrow">→</button>
+      </div>
+      <div id="grid" class="content-grid">
+        <!-- Thumbnails will be injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Let’s Chat!</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p class="note">Looking forward to hearing from you 🌿</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
