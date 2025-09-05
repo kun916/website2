@@ -4,13 +4,28 @@ function toggleMenu() {
   menu.classList.toggle("open");
 }
 
-
-// Carousel categories
+// Carousel categories with links
 const categories = {
-  "Instagram": ["assets/insta1.jpg","assets/insta2.jpg","assets/insta3.jpg","assets/insta4.jpg"],
-  "Podcasts": ["assets/pod1.jpg","assets/pod2.jpg","assets/pod3.jpg","assets/pod4.jpg"],
-  "News Coverage": ["assets/news1.jpg","assets/news2.jpg","assets/news3.jpg","assets/news4.jpg"]
+  "Instagram": [
+    { img: "assets/insta1.png", link: "https://www.instagram.com/reel/DNcgvQIs7NG/?utm_source=ig_web_copy_link&igsh=ZG44ZWFpNXlic2Mx" },
+    { img: "assets/insta2.png", link: "https://www.instagram.com/reel/DG7tC0EBe6D/?utm_source=ig_web_copy_link&igsh=ZmZxeG5mMjNtanBr" },
+    { img: "assets/insta3.png", link: "https://www.instagram.com/p/DNnipnjRax9/?utm_source=ig_web_copy_link&igsh=MWg3cWw3MjY3OG1xbA==" },
+    { img: "assets/insta4.png", link: "https://www.instagram.com/p/DN8GJMPkdZp/?utm_source=ig_web_copy_link&igsh=azVsNzRsZ2p4MzRs" }
+  ],
+  "Podcasts": [
+    { img: "assets/insta2.png", link: "#" },
+    { img: "assets/insta4.png", link: "#" },
+    { img: "assets/insta1.png", link: "#" },
+    { img: "assets/insta3.png", link: "#" }
+  ],
+  "News Coverage": [
+    { img: "assets/insta4.png", link: "#" },
+    { img: "assets/insta2.png", link: "#" },
+    { img: "assets/insta3.png", link: "#" },
+    { img: "assets/insta1.png", link: "#" }
+  ]
 };
+
 let currentIndex = 0;
 const keys = Object.keys(categories);
 
@@ -19,13 +34,21 @@ function loadCategory() {
   document.getElementById("category").textContent = category;
   const grid = document.getElementById("grid");
   grid.innerHTML = "";
-  categories[category].forEach(src => {
+
+  categories[category].forEach(item => {
+    const a = document.createElement("a");
+    a.href = item.link;
+    a.target = "_blank"; // opens Instagram in new tab/app
+
     const img = document.createElement("img");
-    img.src = src;
+    img.src = item.img;
     img.loading = "lazy";
-    grid.appendChild(img);
+
+    a.appendChild(img);
+    grid.appendChild(a);
   });
 }
+
 function nextCategory() {
   currentIndex = (currentIndex + 1) % keys.length;
   loadCategory();
