@@ -144,7 +144,7 @@ body {
 
 .about h2 {
   font-family: 'Playfair Display', serif;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text-dark);
   font-size: 1.8rem;
 }
@@ -169,7 +169,7 @@ body {
 .about-img {
   width: 70%;
   border-radius: var(--radius);
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   box-shadow: none;
 }
 
