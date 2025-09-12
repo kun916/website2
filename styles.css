@@ -1,11 +1,13 @@
 :root {
-  --bg-gradient: linear-gradient(180deg, #f3f1fa, #ffffff); /* lavender to white */
-  --accent: #6b5ca5;          /* soft muted purple */
-  --accent-light: #cfc9e6;    /* pastel lavender */
-  --text-dark: #1f2937;       /* almost black */
-  --text-light: #6b7280;      /* grayish for subtitles */
+  --bg-gradient: linear-gradient(180deg, #eaf4fb, #ffffff); /* light blue to white */
+  --accent: #2563eb;          /* primary blue (brand blue) */
+  --accent-light: #bfdbfe;    /* pastel light blue */
+  --accent-dark: #1e3a8a;     /* deep navy blue */
+  --text-dark: #1e293b;       /* slate blue-gray for headings */
+  --text-light: #475569;      /* muted gray-blue for body */
   --radius: 16px;
 }
+
 
 * {
   margin: 0;
@@ -108,7 +110,8 @@ body {
   padding-top: 6rem;
   min-height: 100vh;
   justify-content: center;
-  background: linear-gradient(180deg, #ffffff 0%, #f5f2fb 100%);  /* lavender background */
+  background: linear-gradient(180deg, #ffffff, #eaf4fb);  /* light blue → white */
+
 }
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
@@ -131,13 +134,8 @@ body {
 
 /* About */
 .about {
-  /* Section-specific theme overrides */
-  --bg-gradient: #f3f1fa; /* soft lavender */
-  --text-dark: #2b213f;   /* dark purple heading */
-  --text-light: #5c5470;  /* soft purple-gray for body text */
-
   padding: 4rem 1.5rem;
-  background: var(--bg-gradient);
+  background: linear-gradient(180deg, #eaf4fb, #bfdbfe);
   text-align: center;
   color: var(--text-light); /* default text color */
 }
@@ -180,11 +178,56 @@ body {
   font-family: 'Playfair Display', serif !important;
 }
 
+/* Services */
+.services {
+  background: linear-gradient(180deg, #bfdbfe, #60a5fa);   /* your purple background */
+  color: white;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.services h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  color: var(--text-dark);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 
 /* Content */
 .content {
   padding: 4rem 1.5rem;
-  background: var(--accent-light);
+  background: linear-gradient(180deg, #60a5fa, #2563eb);
 }
 .content h2 {
   font-family: 'Playfair Display', serif;
@@ -221,7 +264,7 @@ body {
 /* Contact */
 .contact {
   padding: 4rem 1.5rem;
-  background: #fdfdfd;
+  background: linear-gradient(180deg, #2563eb, #1e3a8a);
   text-align: center;
 }
 .contact h2 {

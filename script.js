@@ -18,7 +18,7 @@ const categories = {
     { img: "assets/insta1.png", link: "#" },
     { img: "assets/insta3.png", link: "#" }
   ],
-  "News Coverage": [
+  "Media": [
     { img: "assets/insta4.png", link: "#" },
     { img: "assets/insta2.png", link: "#" },
     { img: "assets/insta3.png", link: "#" },
