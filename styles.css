@@ -110,7 +110,7 @@ body {
   padding-top: 6rem;
   min-height: 100vh;
   justify-content: center;
-  background: linear-gradient(180deg, #3b82f6, #60a5fa); /* light blue → white */
+  background: linear-gradient(180deg, #60a5fa, #93c5fd); /* light blue → white */
 
 }
 .hero-text h1 {
@@ -119,10 +119,10 @@ body {
   color: var(--text-dark);
 }
 .hero-text .highlight {
-  color: var(--accent);
+  color: #ffffff;
 }
 .hero-text p {
-  color: var(--text-light);
+  color: #000000;
   margin-top: 0.5rem;
 }
 .hero-img img {
@@ -135,9 +135,9 @@ body {
 /* About */
 .about {
   padding: 4rem 1.5rem;
-  background: linear-gradient(180deg, #60a5fa, #93c5fd);
+  background: linear-gradient(180deg, #93c5fd, #bfdbfe);
   text-align: center;
-  color: var(--text-light); /* default text color */
+  color: #000000; /* default text color */
 }
 
 .about h2 {
@@ -167,7 +167,8 @@ body {
 .about-img {
   width: 70%;
   border-radius: var(--radius);
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
   box-shadow: none;
 }
 
@@ -178,60 +179,11 @@ body {
   font-family: 'Playfair Display', serif !important;
 }
 
-/* Services */
-.services {
-  background: linear-gradient(180deg, #93c5fd, #bfdbfe);   /* your purple background */
-  color: white;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
-.services h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: rgba(255, 255, 255, 0.25); /* semi-transparent white */
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* soft shadow */
-  backdrop-filter: blur(8px);   /* frosted effect */
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3); /* glass border */
-  padding: 2rem;
-}
-
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.service-card h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.service-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
 /* Explore Section */
 .content {
-  padding: 4rem 1.5rem;
+  padding: 4rem 1.5rem 2rem 1.5rem;
   background: linear-gradient(180deg, #bfdbfe, #eaf4fb); /* light → mid blue */
-  color: white;
+  color: #000000;
   text-align: center;
 }
 
@@ -245,7 +197,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   margin: 2rem 0 1rem;
-  color: #f0f9ff; /* lighter blue-white for subheadings */
+  color: #000000; /* lighter blue-white for subheadings */
 }
 
 /* Collaborations grid */
@@ -321,19 +273,10 @@ body {
   transform: scale(1.1);
 }
 
-.services, .content, .contact {
-  color: #111;   /* near-black text */
-}
-
-.services h2, .content h2, .contact h2,
-.services h3, .content h3, .contact h3 {
-  color: #111;   /* make headings black too */
-}
-
 
 /* Contact */
 .contact {
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem 4rem 1.5rem;
   background: linear-gradient(180deg, #eaf4fb, #ffffff);
   text-align: center;
 }
