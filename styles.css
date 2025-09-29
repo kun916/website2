@@ -134,7 +134,7 @@ body {
 
 /* About */
 .about {
-  padding: 4rem 1.5rem;
+  padding: 4rem 1.5rem 1rem 1.5rem;
   background: linear-gradient(180deg, #93c5fd, #bfdbfe);
   text-align: center;
   color: #000000; /* default text color */
@@ -181,7 +181,7 @@ body {
 
 /* Explore Section */
 .content {
-  padding: 4rem 1.5rem 2rem 1.5rem;
+  padding: 1rem 1.5rem 4rem 1.5rem;
   background: linear-gradient(180deg, #bfdbfe, #eaf4fb); /* light → mid blue */
   color: #000000;
   text-align: center;
