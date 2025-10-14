@@ -243,38 +243,56 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Media Coverage - Larger Logos */
+/* Media Coverage - Scrolling Logos */
 .media-coverage {
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Logo Scroller Container */
+.logo-scroller {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Logo Track - This will animate */
+.logo-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 2rem;
   padding: 0 1rem;
 }
 
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem; /* Increased gap for larger logos */
-  justify-items: center;
-  align-items: center;
+/* Pause animation on hover */
+.logo-scroller:hover .logo-track {
+  animation-play-state: paused;
 }
 
+/* Logo Items */
 .logo-item {
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 1.5rem; /* Increased padding */
+  padding: 1.5rem;
+  width: 200px; /* Fixed width for consistent spacing */
 }
 
 .logo-item img {
-  max-width: 180px; /* Increased from 120px */
-  max-height: 90px; /* Increased from 60px */
+  max-width: 180px;
+  max-height: 90px;
   width: auto;
   height: auto;
   object-fit: contain;
   background: white;
-  padding: 1rem 1.5rem; /* Increased padding */
+  padding: 1rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
@@ -284,6 +302,59 @@ body {
   transform: scale(1.05);
 }
 
+/* Scrolling Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8 - 2rem * 8)); /* Adjust based on number of logos */
+  }
+}
+
+/* Fade effect on edges */
+.logo-scroller::before,
+.logo-scroller::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-scroller::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.logo-scroller::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 160px;
+    padding: 1rem;
+  }
+  
+  .logo-item img {
+    max-width: 140px;
+    padding: 0.8rem 1.2rem;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-160px * 8 - 2rem * 8));
+    }
+  }
+}
 /* Mobile responsiveness */
 @media (max-width: 480px) {
   .logo-grid {
