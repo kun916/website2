@@ -6,14 +6,15 @@
   <title>Kiara Jain | Psychologist & Life Coach</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-left">
-      <a href="#" class="social"><img src="assets/instagram.png" alt="Instagram"></a>
-      <a href="#" class="social"><img src="assets/youtube.png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/kiarajain_36/" class="social"><img src="assets/instagram.png" alt="Instagram"></a>
+      <a href="https://www.youtube.com/@Kiara_jain" class="social"><img src="assets/youtube.png" alt="YouTube"></a>
     </div>
     <div class="nav-right">
       <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -187,17 +188,28 @@
 </section>
 
 
-  <!-- Contact Section -->
+   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2>Let’s Chat!</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
+    <h2>Let's Chat!</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
     <p class="note">Looking forward to hearing from you 🌿</p>
   </section>
+
+  <!-- Success Popup -->
+  <div id="successPopup" class="popup-overlay">
+    <div class="popup-content">
+      <button class="close-popup">&times;</button>
+      <div class="popup-message">
+        <h3>Thank you for the message!</h3>
+        <p>I look forward to help guide you!</p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
